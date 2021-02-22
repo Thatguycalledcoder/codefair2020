@@ -1,5 +1,6 @@
 #!usr/bin/env python
 
+#Finds an exact trend in the number of new infected cases -- use partial_time_series file for test 
 import sys
 if len(sys.argv) != 3:
     print("Parameter error: <interpreter> <filename> <covid data> <partial time series data")
@@ -31,7 +32,5 @@ for i in data_pts:
 for i in range(len(pts_values)):
     for j in range(len(newconfcases)):
         if pts_values[i] == newconfcases[j] and pts_values[i+1] == newconfcases[j+1] and pts_values[i+2] == newconfcases[j+2]:
-            print("It is at index", j)
-            print("It is exactly there.")
             break
     break
